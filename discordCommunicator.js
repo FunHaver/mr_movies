@@ -45,7 +45,7 @@ class DiscordCommunicator {
 
     /**
      * Listens for any message to be created in any given channel in a "guild" a.k.a server
-     * If the bot is tagged, they respond with the tagger's tag
+     * If the bot is tagged, they respond with a chatgpt response
      */
     producerResponse = () => {
         this.client.on(GatewayDispatchEvents.MessageCreate, async({ data: interaction, api}) => {
