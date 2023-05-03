@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A GPT Discord Chat Bot with a movie producer persona ",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,8 +18,8 @@
   },
   "homepage": "https://github.com/FunHaver/mr_movies#readme",
   "dependencies": {
+    "@discordjs/core": "^0.6.0",
     "axios": "^1.4.0",
-    "discord-interactions": "^3.3.0",
     "dotenv": "^16.0.3"
   }
 }
