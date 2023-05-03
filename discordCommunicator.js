@@ -53,6 +53,7 @@ class DiscordCommunicator {
 
                 const untaggedContent = interaction.content.replace(`<@${this.botUser.id}>`, '');
                 const response = await this.gptAPI.submitPrompt(untaggedContent, interaction.author.username);
+                console.log(response);
                 await api.channels.createMessage(interaction.channel_id, {
                     content: `${response.data.choices[0].message.content}`
                 })
