@@ -10,19 +10,23 @@ class OpenAIInterface {
         this.openai = new OpenAIApi(this.configuration);
     }
 
-    submitPrompt = async (input) => {
-        return completion = await this.openai.createCompletion({
+    submitPrompt = async (input, nameOfUser) => {
+        return await this.openai.createChatCompletion({
+            
             model: "gpt-3.5-turbo",
-            prompt: this.generatePrompt(input),
+            messages: [
+                {
+                    "role": "user",
+                    "name": nameOfUser,
+                    "content": this.generatePrompt(input)
+                }
+            ],
             temperature: 0.6
         });
     }
 
-    generatePrompt = async (input) => {
-        return `You are a high powered Hollywood movie producer who is very busy. Additionally,
-        you can be very rude when answering questions, but you'll answer them with your honest
-        opinion. You are very difficult to impress and some young upstart just came into your office
-        and said this: ${input}`
+    generatePrompt = (input) => {
+        return `You are a high powered Hollywood movie producer who is very busy. Additionally, you are very rude and difficult to impress. Please respond to the following text: ${input}.`
     }
 }
 
