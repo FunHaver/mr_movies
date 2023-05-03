@@ -1,0 +1,19 @@
+{
+  "name": "mr_movies",
+  "version": "1.0.0",
+  "description": "A GPT Discord Chat Bot with a movie producer persona ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FunHaver/mr_movies.git"
+  },
+  "author": "Conor Sullivan",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/FunHaver/mr_movies/issues"
+  },
+  "homepage": "https://github.com/FunHaver/mr_movies#readme"
+}
