@@ -15,7 +15,7 @@ then
     exit 2
 fi
 
-if [[ $UID != 0]]; then
+if [[ $UID != 0 ]]; then
     echo "Please run this script with sudo"
     exit 1
 fi
