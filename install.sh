@@ -28,7 +28,7 @@ if ! [ -f "$INSTALL_DIR" ] ; then
 fi
 
 # Ask user if they want to update or install fresh
-if $IS_UPDATE ; then
+if [[ $IS_UPDATE == 0 ]] ; then
     echo "Looks like $INSTALL_DIR already exists."
     read -p "Start update mode? (y/n): " update_mode
     
@@ -40,7 +40,7 @@ if $IS_UPDATE ; then
     fi
 fi
 
-if $IS_UPDATE ; then
+if [[ $IS_UPDATE == 0 ]] ; then
     echo "Pulling down latest files..."
     git pull
     
@@ -69,7 +69,7 @@ if $IS_UPDATE ; then
     echo "Update complete."
 fi
 
-if ! $IS_UPDATE; then
+if ! [[ $IS_UPDATE == 0 ]]; then
     echo  "--------------------"
     echo "|                    |"
     echo "|     What do you    |"
