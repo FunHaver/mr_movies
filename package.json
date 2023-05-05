@@ -19,7 +19,6 @@
   "homepage": "https://github.com/FunHaver/mr_movies#readme",
   "dependencies": {
     "@discordjs/core": "^0.6.0",
-    "axios": "^1.4.0",
     "dotenv": "^16.0.3",
     "openai": "^3.2.1"
   }

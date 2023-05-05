@@ -1,0 +1,8 @@
+[Unit]
+Description=Mr. Will Movies Discord Bot
+
+[Service]
+ExecStart=/bin/node /opt/mr_movies/app.js
+
+[Install]
+WantedBy=multi-user.target

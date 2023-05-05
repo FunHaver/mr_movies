@@ -1,5 +1,4 @@
 import { Configuration, OpenAIApi } from "openai";
-import axios from "axios";
 
 class OpenAIInterface {
 
@@ -14,7 +13,7 @@ class OpenAIInterface {
         return await this.openai.createChatCompletion({
             
             model: "gpt-3.5-turbo",
-            max_tokens: 400, //Discord max character limit is 2000
+            max_tokens: 400, //Discord max character limit is 2000. Tokens are mostly words
             messages: [
                 {
                     "role": "user",
