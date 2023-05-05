@@ -71,13 +71,13 @@ if [[ $IS_UPDATE == 0 ]] ; then
 fi
 
 if [[ $IS_UPDATE == 1 ]]; then
-    echo  "--------------------"
+    echo  " -------------------"
     echo "|                    |"
     echo "|     What do you    |"
     echo "|   want? I'm busy!  |"
     echo "|     -Mr. Movies    |"
     echo "|                    |"
-    echo  "--------------------"   
+    echo  " -------------------"   
 
     echo "Creating installation directory"
     mkdir "$INSTALL_DIR"
