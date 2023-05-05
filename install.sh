@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+
 INSTALL_DIR=/opt/mr_movies
 IS_UPDATE=1
 
@@ -56,11 +56,11 @@ if [[ $IS_UPDATE == 0 ]] ; then
     if [[ $DIFF_EXIT_CODE == 0 ]]; then
         echo "systemd unit files are identical"
 
-        else
-            echo "installing new mr_movies.service file"
-            cp mr_movies.service /etc/systemd/system/mr_movies.service
-            systemctl daemon-reload
-            systemctl restart mr_movies.service
+    else
+        echo "installing new mr_movies.service file"
+        cp mr_movies.service /etc/systemd/system/mr_movies.service
+        systemctl daemon-reload
+        systemctl restart mr_movies.service
     fi
 
     echo "Updating npm dependenices"
