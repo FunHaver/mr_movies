@@ -32,7 +32,7 @@ if $IS_UPDATE ; then
     echo "Looks like $INSTALL_DIR already exists."
     read -p "Start update mode? (y/n): " update_mode
     
-    if ! [[ $update_mode == [yY]]]; then
+    if ! [[ $update_mode == [yY] ]]; then
         IS_UPDATE=1
         
         else 
@@ -100,7 +100,7 @@ if ! $IS_UPDATE; then
 
     read -p "Start mr_movies.service on startup? (y/n): " STARTUP_PROGRAM
 
-    if [[ $STARTUP_PROGRAM == [yY]]]; then
+    if [[ $STARTUP_PROGRAM == [yY] ]]; then
         echo "Enabling mr_movies.service on startup"
         systemctl enable mr_movies
     fi
