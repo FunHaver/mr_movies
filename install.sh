@@ -32,9 +32,10 @@ if [[ $IS_UPDATE == 0 ]] ; then
     echo "Looks like $INSTALL_DIR already exists."
     read -p "Start update mode? (y/n): " update_mode
     
-    if ! [[ $update_mode == [yY] ]]; then
+    if [[ $update_mode != [yY] ]]; then
         IS_UPDATE=1
-        
+        echo "Removing $INSTALL_DIR"
+        rm -rf $INSTALL_DIR
         else 
             echo "Starting update"
     fi
