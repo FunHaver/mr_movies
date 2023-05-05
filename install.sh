@@ -83,6 +83,7 @@ if [[ $IS_UPDATE == 1 ]]; then
     mkdir "$INSTALL_DIR"
 
     read -sp "Discord Token: " DISCORD_TOKEN
+    echo ""
     read -sp "OpenAI Key: " OPENAI_KEY
 
     echo "Copying program files"
@@ -92,8 +93,8 @@ if [[ $IS_UPDATE == 1 ]]; then
 
     echo "Creating .env file"
     touch "$INSTALL_DIR"/.env
-    printf "DISCORD_TOKEN=$DISCORD_TOKEN\n" >> "$INSTALL_DIR"/.env
-    printf "OPENAI_KEY=$OPENAI_KEY" >> "$INSTALL_DIR"/.env
+    printf "\"DISCORD_TOKEN=$DISCORD_TOKEN\"\n" >> "$INSTALL_DIR"/.env
+    printf "\"OPENAI_KEY=$OPENAI_KEY\"" >> "$INSTALL_DIR"/.env
 
     echo "Installing systemd unit file"
     cp mr_movies.service /etc/systemd/system/mr_movies.service
