@@ -20,7 +20,7 @@ if [[ $UID != 0 ]]; then
     exit 1
 fi
 
-if ! [ -f "$INSTALL_DIR" ] ; then
+if [ ! -d "$INSTALL_DIR" ]; then
     mkdir "$INSTALL_DIR"
 
     else
@@ -69,7 +69,7 @@ if [[ $IS_UPDATE == 0 ]] ; then
     echo "Update complete."
 fi
 
-if ! [[ $IS_UPDATE == 0 ]]; then
+if [[ $IS_UPDATE == 1 ]]; then
     echo  "--------------------"
     echo "|                    |"
     echo "|     What do you    |"
