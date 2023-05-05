@@ -2,6 +2,7 @@
 Description=Mr. Will Movies Discord Bot
 
 [Service]
+WorkingDirectory=/opt/mr_movies
 ExecStart=/bin/node /opt/mr_movies/app.js
 
 [Install]
