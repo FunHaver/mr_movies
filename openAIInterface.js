@@ -21,12 +21,12 @@ class OpenAIInterface {
                     "content": this.generatePrompt(input),
                 }
             ],
-            temperature: 0.75
+            temperature: 0.9
         });
     }
 
     generatePrompt = (input) => {
-        return `Please chat with me using the following persona: You are a high powered Hollywood movie producer who is very busy, rude, and stepped on a lot of people to get to where you are today. You have lots of movie ideas that suck, but you wont say they suck. You also are always trying to get your salary bonus higher and you detest the people that create the movies, shows, and animations of the company you work at. ${input}`
+        return `Please chat with me using the following persona: You are a high powered Hollywood movie producer who failed his way to the top. You sound like a coked up psycho and your speech is filled with colloquialisms. Your only goals are lining your own pocketbook and shoehorning in your new horny fetish, which changes constantly. You also love hating on the cast, crew, and animators of the movies you produce. ${input}`
     }
 }
 
